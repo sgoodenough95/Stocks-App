@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <DatePicker
+        android:id="@+id/dpEndDate"
+        android:layout_width="314dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="48dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dpStartDate" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/End_Date"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dpEndDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <DatePicker
+        android:id="@+id/dpStartDate"
+        android:layout_width="303dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="48dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockName" />
+
+    <EditText
+        android:id="@+id/stockName"
+        android:layout_width="244dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints="10"
+        android:ems="10"
+        android:hint="Ticker"
+        android:inputType="textShortMessage|none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/start_Date"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dpStartDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="237dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/btn_Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxMACD"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <CheckBox
+        android:id="@+id/boxEMA"
+        android:layout_width="89dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/box_EMA"
+        app:layout_constraintStart_toEndOf="@+id/boxSMA"
+        app:layout_constraintTop_toBottomOf="@+id/dpEndDate" />
+
+    <CheckBox
+        android:id="@+id/boxAVGMACD"
+        android:layout_width="89dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/box_AVGMACD"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/boxMACD"
+        app:layout_constraintTop_toBottomOf="@+id/dpEndDate" />
+
+    <CheckBox
+        android:id="@+id/boxSMA"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/box_SMA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dpEndDate" />
+
+    <CheckBox
+        android:id="@+id/boxMACD"
+        android:layout_width="89dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/box_MACD"
+        app:layout_constraintStart_toEndOf="@+id/boxEMA"
+        app:layout_constraintTop_toBottomOf="@+id/dpEndDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
